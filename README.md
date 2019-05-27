@@ -1,7 +1,7 @@
 Backend Todos:  
 -Fix ingest  
 -Move JSON iteration to backend
--Add batch queueing for optimization
+-Add batch queueing for optimization  
 -Return the other metrics (see below- current metric is clicks per product for specific date):  
     clicks per source  
     clicks per product  
