@@ -4,14 +4,11 @@ Backend Todos:
     clicks per source  
     clicks per product  
     clicks per date  
-  
     clicks per source for specific product  
     clicks per source for specific date  
     clicks per source for specific product and date  
-  
     clicks per product for specific source  
     clicks per product for specific date  
-  
     clicks per date for specific source  
     clicks per date for specific product  
     clicks per date for specific source and product  
