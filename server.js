@@ -40,6 +40,7 @@ clicksumRoutes.route('/:sourceName/:productName/:dateIngested').get(function(req
    });
 });
 
+/*
 clicksumRoutes.route('/ingest').post(function(req, res) {
    Clicksum.insertMany(req.body, function(error, docs) {
       if (err) {
@@ -49,17 +50,14 @@ clicksumRoutes.route('/ingest').post(function(req, res) {
       }
    });
 });
+*/
 
-clicksumRoutes.route('/save').post(function(req, res) {
+clicksumRoutes.route('/ingest').post(function(req, res) {
    let clicksum = new Clicksum(req.body);
 
-   clicksum.save()
-       .then(clicksum => {
-          res.status(200).json( {'clicksum' : 'success!'} );
-       })
-       .catch(err => {
-          res.status(400).send('failure!');
-       });
+   clicksum.save(function (err, clicksum) {
+      if (err) return console.error(err);
+   });
 });
 
 app.use('/clicksums', clicksumRoutes);
